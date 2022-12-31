@@ -3,8 +3,8 @@
 		class="h-screen flex flex-col justify-between ddivide-y dark:divide-slate-700 space-y-6"
 	>
 		<Header class="shrink-0" />
-		<div class="h-full">
-			<Calculator />
+		<div class="h-full flex items-center">
+			<Calculator class="w-full" />
 		</div>
 		<Footer class="shrink-0" />
 	</div>

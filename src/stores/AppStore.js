@@ -1,9 +1,10 @@
-import { evaluate, round } from "mathjs"
+import { evaluate, round } from "mathjs";
 import { defineStore } from "pinia";
 
 export const useAppStore = defineStore("app-store", {
 	state: () => {
 		return {
+			history: false,
 			mathString: 0,
 			solve: false,
 		};
@@ -11,7 +12,7 @@ export const useAppStore = defineStore("app-store", {
 
 	getters: {
 		result() {
-			return this.solve ? (evaluate(this.mathString)) : false;
+			return this.solve ? evaluate(this.mathString) : false;
 		},
 	},
 });

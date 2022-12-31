@@ -110,6 +110,10 @@ const processClick = () => {
 			break;
 
 		case "plus-minus":
+			if (!p || p === "0") {
+				return;
+			}
+
 			let y = p.split("");
 			if (y[0] === "-") {
 				y[0] = "";
@@ -125,14 +129,16 @@ const processClick = () => {
 	mathString.value = p ? `${p}${v}` : `${v}`;
 };
 
-
 const processKeyPress = (e) => {
 	const keyPressed = e.key;
 
 	if ([...allowedButtonKeys, "Enter", "=", ")"].includes(keyPressed)) {
 		if (["Enter", "="].includes(keyPressed) && keyButton.name === "solve") {
 			return processClick();
-		} else if (["(", ")"].includes(keyPressed) && keyButton.name === "bracket") {
+		} else if (
+			["(", ")"].includes(keyPressed) &&
+			keyButton.name === "bracket"
+		) {
 			return processClick();
 		} else if (keyPressed === keyButton.value) {
 			return processClick();

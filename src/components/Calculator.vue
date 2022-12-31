@@ -1,27 +1,33 @@
 <template>
 	<div
-		class="overflow-hidden rounded-md bg-slate-50 dark:bg-slate-700 divide-y dark:divide-slate-800"
+		class="!overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-700 relative"
 	>
+		<History />
 		<ResultDisplay />
-		<div
-			v-for="(kg, kgi) in keys"
-			:key="`key-group${kgi}`"
-			class="grid grid-cols-4 divide-x dark:divide-slate-800"
-		>
-			<KeyButton
-				v-for="key in kg"
-				:key="`key-${key.name}`"
-				:allowed-button-keys="allowedButtonKeys"
-				:key-button="key"
-			/>
+		<div class="divide-y dark:divide-slate-800">
+			<div
+				v-for="(kg, kgi) in keys"
+				:key="`key-group${kgi}`"
+				class="grid grid-cols-4 divide-x dark:divide-slate-800"
+			>
+				<KeyButton
+					v-for="key in kg"
+					:key="`key-${key.name}`"
+					:allowed-button-keys="allowedButtonKeys"
+					:key-button="key"
+				/>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script setup>
 import { computed, onMounted, onUnmounted } from "vue";
+
+import History from "./History.vue";
 import KeyButton from "./KeyButton.vue";
 import ResultDisplay from "./ResultDisplay.vue";
+
 import { storeToRefs } from "pinia";
 import { useAppStore } from "../stores/AppStore";
 const appStore = useAppStore();
