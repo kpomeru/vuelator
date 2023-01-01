@@ -1,35 +1,15 @@
-# vuelator
+# Vuelator
 
-This template should help get you started developing with Vue 3 in Vite.
+![VueDo Banner](./public/images/vuelator-banner.png "VueDo Banner")
 
-## Recommended IDE Setup
+Vuelator, a calculator built with Vue 3
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Tools and Features
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+-   History Mode
+-   Dark and Light Theme
+-   Frontend
+-   TailwindCSS
+-   Button and Key inputs
+-   MathJS
+-   States with Pinia
